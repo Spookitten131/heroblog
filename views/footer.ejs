@@ -1,0 +1,37 @@
+<div class="footer container">
+    <p>2024 All Rights Reserved</p>
+    <div class="social">
+      <a href="#"><box-icon type='logo' name='facebook'></box-icon></a>
+      <a href="#"><box-icon type='logo' name='twitter'></box-icon></a>
+      <a href="#"><box-icon type='logo' name='instagram'></box-icon></a>
+      <a href="#"><box-icon type='logo' name='linkedin'></box-icon></a>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script> 
+  let header = document.querySelector('header')
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow', window.scrollY > 0)
+  })
+  </script>
+   <script>
+    document.getElementById('stupidButton').addEventListener('click', function() {
+        window.location.href = '/submit'; // URL to navigate to
+    });
+</script>
+<script>
+  document.getElementById('edit-button').addEventListener('click', function() {
+      window.location.href = '/edit'; // URL to navigate to
+  });
+</script>
+<script>
+  function deleteElement(elementId) {
+      const element = document.getElementById(elementId);
+      if (element) {
+          element.remove();
+      }
+  }
+</script>
+  </body>
+  </html>

@@ -1,0 +1,13 @@
+<%- include ("header.ejs") %>
+
+<section class="user-container">
+    <h2>Edit your post:</h2>
+    <form action="/edit" method="POST" class="user-input">
+        <input id="postName" placeholder="Title" name="postName" required value="<%= postName %>"><br>
+        <textarea id="userPost" placeholder="Write your new post" name="userInput" required><%= userInput %></textarea><br>
+        <input id="userName" type="text" name="userName" placeholder="Your name" required value="<%=userName %>"><br>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+</section> 
+
+<%- include ("footer.ejs") %>

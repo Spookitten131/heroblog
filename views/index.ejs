@@ -1,0 +1,70 @@
+<%- include ("header.ejs") %>
+
+<section class="home" id="home">
+  <div class="home-text container">
+    <h2 class="home-title medievalsharp-regular">The blog of true heroes</h2>
+    <br>
+    <button type="button" class="home-subtitle" id="stupidButton" onclick="location.href='/submit'">Tell your own story!</button>
+  </div>
+</section>
+
+<% if (locals.userName && locals.userInput && locals.postName) { %>
+<section class="post container" id="madeByUser">
+  <div class="post-box">
+    <div class="icons">
+      <button class="no-buttons"><box-icon name='edit-alt' color='#999898' id="edit-button"></box-icon></button>
+    <button class="no-buttons"><box-icon name='trash' color='#999898' onclick="deleteElement('madeByUser')"></box-icon></button>
+    <br>
+  </div>
+  <a class="post-title"> <%= postName %> </a>
+  <span class="post-date"><%= new Date().toDateString() %></span>
+  <p class="post-description">
+    <%= userInput %>
+  </p>
+  <div class="profile">
+    <span class="profile-name"><%= userName %></span>
+  </div>
+  </div>
+</section>
+<% } %>
+
+<section class="post container">
+  <div class="post-box">
+  <a href="post-page-1.ejs" class="post-title">Fav torture devices 😍</a>
+  <span class="post-date">25 Sep 1320</span>
+  <p class="post-description">
+    🏰⚔️💀 Greetings, noble subjects of the realm! King Richie here, ready to delve into the dark arts of medieval torture devices! First on our list of favorites is the Iron Maiden—a fiendish contraption adorned with spikes designed to embrace the condemned in a deadly embrace. Then, there's the Rack, a master of stretching limbs until they cry for mercy. And let us not forget the Pear of Anguish, a wicked device for expanding orifices where no expansion should occur. #TortureTech With these instruments of agony, justice—or should I say, vengeance—is served with a merciless hand. May they strike fear into the hearts of our enemies and uphold the order of the kingdom! #MedievalHorror #DarkJustice
+  </p>
+  <div class="profile">
+    <span class="profile-name">His Majesty Richard II</span>
+  </div>
+  </div>
+</section>
+
+<section class="post container">
+  <div class="post-box">
+  <a href="post-page-1.ejs" class="post-title">Just another day in the life of a goofball knight</a>
+  <span class="post-date">06 Jun 1321</span>
+  <p class="post-description">
+    Hey fellow knights and noble folks! Sir Galahad here with a tale that's sure to tickle thy funny bone! 🎩✨ So, picture this: I'm out on a quest to slay a dragon, right? 🐉🗡️ But as I'm charging in all valiant-like, I trip over me own sword and end up face-first in a muddy puddle! 🤦‍♂️🤣 Talk about embarrassing! But wait, it gets better! As I'm trying to get back on me feet, the dragon starts snickering at me! Yes, you heard that right, the dragon was laughing at me! 🐲😂 Turns out, it had a sense of humor sharper than its claws! 🤣 Anyway, long story short, I eventually managed to slay the dragon (with a little less grace than I'd hoped for, mind you), but now I've got a new title: Sir Galahad, the Knight Who Tripped Over His Own Sword! 🙈🏆 Just another day in the life of a medieval goofball knight! 😜 #KnightFail #DragonDrama #MedievalMishaps
+  </p>
+  <div class="profile">
+    <span class="profile-name">Sir Galahad</span>
+  </div>
+  </div>
+</section>
+
+<section class="post container">
+  <div class="post-box">
+  <a href="post-page-1.ejs" class="post-title">Makeup insights</a>
+  <span class="post-date">24 Dec 1420</span>
+  <p class="post-description">
+    💄👑✨ Greetings, lovely maidens of the kingdom! Princess Arabella here, ready to spill the tea on medieval makeup must-haves! For a flawless glow fit for royalty, indulge in a potion of crushed rose petals and powdered pearls. Then, adorn thy lashes with kohl from distant lands for eyes that mesmerize. And don't forget the lips—stain them with the ripest berries for a royal pout! #MedievalGlam #RoyalBeauty 💅✨
+  </p>
+  <div class="profile">
+    <span class="profile-name">Princess Arabella</span>
+  </div>
+  </div>
+</section>
+
+<%- include ("footer.ejs") %>
